@@ -10,21 +10,21 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Register"
+        tools:context=".activity.RegisterActivity"
         android:layout_margin="20dp">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/reg_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:fontFamily="@font/digital"
-            android:text="Instagram"
-            android:textSize="55dp"
-            android:textColor="#9088FF"
+            android:text="@string/logo"
+            android:textColor="#448AFF"
+            android:textSize="55sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="50dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="350dp"
@@ -38,7 +38,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Email" />
+                android:hint="@string/email_hint"
+                android:textColorHint="#616161" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -53,7 +54,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Full Name" />
+                android:hint="@string/full_name"
+                android:textColorHint="#616161" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -68,7 +70,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="350dp"
                 android:layout_height="match_parent"
-                android:hint="Username" />
+                android:hint="@string/username_hint"
+                android:textColorHint="#616161" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -83,14 +86,14 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Password" />
+                android:hint="@string/password_hint" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.checkbox.MaterialCheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/reg_checkBox"
-            android:text="Terms Conditions"
+            android:text="@string/terms_conditions"
             app:layout_constraintTop_toBottomOf="@id/reg_Password"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -100,7 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/reg_RegBtn"
-            android:text="Register"
+            android:text="@string/register"
             app:layout_constraintTop_toBottomOf="@id/reg_checkBox"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -110,7 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/reg_label"
-            android:text="Have an account?"
+            android:text="@string/label"
             app:layout_constraintTop_toBottomOf="@id/reg_RegBtn"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
