@@ -1,7 +1,40 @@
 <resources>
     <string name="app_name">Instagram</string>
     <string name="log_SignUp"><u>Sign Up</u></string>
-    <string name="reg_LogIn"><u>Log in</u></string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- activity_register -->
+    <string name="logo">Instagram</string>
+    <string name="email_hint">Email</string>
+    <string name="full_name">Full Name</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="terms_conditions">Terms Conditions</string>
+    <string name="register">Register</string>
+    <string name="label">Have an account?</string>
+    <string name="reg_LogIn"><u>Log in</u></string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_forgot_password">Forgot password?</string>
+    <string name="login_loginBtn">Login</string>
+    <string name="login_label">Don\'t have an account</string>
+    <string name="from">from</string>
+    <string name="meta">Meta</string>
+    <string name="OBSFrag1_welcome_to_instagram">WELCOME TO INSTAGRAM</string>
+    <string name="OBSFrag1_next">Next</string>
+    <string name="OBSFrag2_social_connect">Connect Socially</string>
+    <string name="OBSFrag2_next">Next</string>
+    <string name="OBSFrag3_enjoy">Enjoy conversation with friends</string>
+    <string name="OBSFrag3_finish">Finish</string>
+    <string name="singlefeed_desc">Image is beautiful</string>
+    <string name="singlefeed_username">username</string>
+    <string name="biodesc"><p>hello,
+    Bio
+    Bio
+    Bio
+    Bio
+    Bio
+    Bio</p></string>
+
 </resources>
