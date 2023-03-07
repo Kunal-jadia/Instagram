@@ -1,5 +1,6 @@
 package com.example.instagram.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -26,6 +27,12 @@ class MainActivity : AppCompatActivity() {
                 R.id.profile -> {replaceFragment(ProfileFragment())}
             }
             true
+        }
+
+        binding.chat.setOnClickListener {
+
+            val intent = Intent(this, ChatActivity::class.java)
+            startActivity(intent)
         }
     }
 

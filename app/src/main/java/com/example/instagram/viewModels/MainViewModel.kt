@@ -9,10 +9,10 @@ import com.example.instagram.repository.FeedRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class MainViewModel(private val repository: FeedRepository ) : ViewModel() {
+class MainViewModel(private val repository: FeedRepository, private val page : Int) : ViewModel() {
     init {
         viewModelScope.launch (Dispatchers.IO){
-            repository.getFeed()
+            repository.getFeed(page)
         }
     }
 

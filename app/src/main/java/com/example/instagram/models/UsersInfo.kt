@@ -3,7 +3,6 @@ package com.example.instagram.models
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-
 @Entity(tableName = "Users")
 data class UsersInfo(
 

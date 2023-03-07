@@ -12,12 +12,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
         binding.logBtn.setOnClickListener {
-
-
-
             onLogged()
             val switchactivity = Intent(this@LoginActivity, MainActivity::class.java)
             startActivity(switchactivity)

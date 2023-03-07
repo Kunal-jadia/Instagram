@@ -17,4 +17,5 @@
     <style name="Splashscreen" parent="Theme.MaterialComponents.Light.NoActionBar" />
     <style name="LoginScreen" parent="Theme.MaterialComponents.Light.NoActionBar" />
     <style name="Registerscreen" parent="Theme.MaterialComponents.Light.NoActionBar" />
+    <style name="OBscreen" parent="Theme.MaterialComponents.Light.NoActionBar" />
 </resources>
