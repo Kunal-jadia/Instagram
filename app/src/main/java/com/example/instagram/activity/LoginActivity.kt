@@ -14,13 +14,13 @@ class LoginActivity : AppCompatActivity() {
 
         binding.logBtn.setOnClickListener {
             onLogged()
-            val switchactivity = Intent(this@LoginActivity, MainActivity::class.java)
-            startActivity(switchactivity)
+            val switchActivity = Intent(this@LoginActivity, MainActivity::class.java)
+            startActivity(switchActivity)
         }
 
         binding.logSignUp.setOnClickListener {
-            val switchactivity = Intent(this, RegisterActivity::class.java)
-            startActivity(switchactivity)
+            val switchActivity = Intent(this, RegisterActivity::class.java)
+            startActivity(switchActivity)
         }
     }
 

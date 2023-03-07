@@ -1,6 +1,8 @@
 package com.example.instagram.activity
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +11,8 @@ import com.example.instagram.databinding.ActivityRegisterBinding
 import com.example.instagram.db.UserDatabase
 import com.example.instagram.models.UsersInfo
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 class RegisterActivity : AppCompatActivity() {
@@ -28,22 +32,18 @@ class RegisterActivity : AppCompatActivity() {
             val username = binding.regUserName.editText?.text.toString()
             val pass = binding.regPassword.editText?.text.toString()
 
-
             if(isEmailvalid(email) && isFullnamevalid(fullname) && isUsernamevalid(username) && isPasswordvalid(pass) && isCheckbox()){
                 lifecycleScope.launch (Dispatchers.IO){
                     database.userDao().addUser(UsersInfo(null,email,fullname,username,pass))
                 }
                 Toast.makeText(this, "Registered successfully", Toast.LENGTH_SHORT).show()
+                clearFields()
             }
         }
-    }
 
-    private fun isCheckbox(): Boolean {
-        if(binding.regCheckBox.isChecked){
-            return true
-        } else{
-            binding.regCheckBox
-            return false
+        binding.regLogIn.setOnClickListener {
+            val switchActivity = Intent(this, LoginActivity::class.java)
+            startActivity(switchActivity)
         }
     }
 
@@ -59,22 +59,11 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun isUsernamevalid(username: String): Boolean {
-        if (username.isEmpty()){
+        if(username.isEmpty()){
             binding.regUserName.error = "Enter username"
             return false
         } else {
             binding.regUserName.error = null
-            return true
-        }
-    }
-
-    private fun isFullnamevalid(fullname: String): Boolean {
-
-        if (fullname.isEmpty()){
-            binding.regFullName.error = "Enter name"
-            return false
-        } else {
-            binding.regFullName.error = null
             return true
         }
     }
@@ -91,5 +80,31 @@ class RegisterActivity : AppCompatActivity() {
             binding.regEmail.error = null
             return true
         }
+    }
+
+    private fun isFullnamevalid(fullname: String): Boolean {
+
+        if (fullname.isEmpty()){
+            binding.regFullName.error = "Enter name"
+            return false
+        } else {
+            binding.regFullName.error = null
+            return true
+        }
+    }
+
+    private fun isCheckbox(): Boolean {
+        if(binding.regCheckBox.isChecked){
+            return true
+        }
+        return false
+    }
+
+    private fun clearFields() {
+        binding.regEmail.editText?.text?.clear()
+        binding.regFullName.editText?.text?.clear()
+        binding.regUserName.editText?.text?.clear()
+        binding.regPassword.editText?.text?.clear()
+        binding.regCheckBox.isChecked = false
     }
 }
